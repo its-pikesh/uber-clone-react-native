@@ -3,13 +3,13 @@ import React from "react";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import AntDesign from "react-native-vector-icons/AntDesign";
-//mykey = AIzaSyCC7MY_dRrV0ZbLjmPMsVS0QxMSY3e3Z9U
+
 export default function SearchBar({ cityHandler }) {
   return (
     <View style={{ marginTop: 15, flexDirection: "row" }}>
       <GooglePlacesAutocomplete
         query={{
-          key: "AIzaSyDCFhvNPRBU9jJr5bwgpAa98LhBdWxV-PI",
+          key: "YOUR_KEY_HERE",
           language: "en",
         }}
         onPress={(data, detail = null) => {
@@ -20,9 +20,9 @@ export default function SearchBar({ cityHandler }) {
         placeholder="Search"
         requestUrl={{
           useOnPlatform: "all", // or "all"
-          url: "https://maps.googleapis.com/maps/api", // or any proxy server that hits https://maps.googleapis.com/maps/api
+          url: "https://maps.googleapis.com/maps/api", //https://cors-anywhere.herokuapp.com/ or any proxy server that hits https://maps.googleapis.com/maps/api
           headers: {
-            Authorization: `AIzaSyCC7MY_dRrV0ZbLjmPMsVS0QxMSY3e3Z9U`,
+            Authorization: ``,
             "Access-Control-Allow-Origin": "*", // if required for your proxy
           },
         }}
